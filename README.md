@@ -8,6 +8,18 @@
 
 项目以 MIT License 开源。完整的最终需求见 [DESIGN_REQUIREMENTS.md](./DESIGN_REQUIREMENTS.md)，从零复刻的方法见 [REPLICATION_GUIDE.md](./REPLICATION_GUIDE.md)。
 
+## 用参考图创建场景的 Skill
+
+本项目的制作经验已整理为可分享的 [threejs-reference-diorama Skill](./skills/threejs-reference-diorama/SKILL.md)，包含参考图分析、程序化建模、像素后处理、交互、可选季节动画与验收方法。
+
+[下载 Skill ZIP](./skills/threejs-reference-diorama.zip)。解压后，将 `threejs-reference-diorama` 文件夹放到使用者项目的 `.agents/skills/` 下（支持该路径的 Codex 环境），重新打开项目，附上参考图并输入：
+
+```text
+使用 $threejs-reference-diorama，根据这些参考图制作可交互的 Three.js 场景，支持原生和像素画风。
+```
+
+其他支持 Skill 的工具可使用其规定的安装目录；也可以让助手直接读取该文件夹中的 `SKILL.md`。这是一套可复用的制作流程，不是现成场景模板，也不保证任意参考图都能一次生成成品。复杂构图和动画仍需逐步验证、调整。
+
 根据用户的溪边回廊、古树与木桥参考图搭建的程序化 Three.js 小景。竖向古树、紧凑庭院、自然溪岸和深色轮廓形成适合手机的插画构图；细像素采样、有限色阶和最近邻纹理保留原有质感。像素模式每个画面采样约对应 2×2 CSS 像素，支持高分辨率屏幕，保留旋转与放大观察。建筑、植物、季节人物与动物、鱼、水、纹理、天气均由代码生成。没有下载的图片、模型、音效、HDR 或网络字体。Three.js 和 React 作为程序依赖本地打包。
 
 ## 手机构图与轮廓
